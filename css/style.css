@@ -61,19 +61,23 @@ footer{
 @keyframes logo_wiggle{
   /*Your code here.*/
 
-} 
+}
 
 #logo{
    /*Your code here.*/
- 
+
 }
 
 /* Cards! */
 .pricing{
-    min-height: 500px;
-    /*Your code here.*/
-    /*Don't forget to vertically and horizontally alight the card*/
-  
+  min-height: 500px;
+  /*Your code here.*/
+  /*Don't forget to vertically and horizontally align the card*/
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .card {
@@ -83,7 +87,9 @@ footer{
   padding: 0 0 50px 0;
   /*Your code here.*/
   /*Take a look at flex-basis*/
-
+  display: flex;
+  flex-direction: column;
+  flex-basis: 400px;
 }
 
 .card > header{
@@ -91,6 +97,9 @@ footer{
   border: 2px solid #45ADAD;
   padding: 20px 0;
   border-radius: 7px 7px 0 0;
+  display:flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .card > ul{
@@ -129,6 +138,12 @@ footer{
 .gallery{
   min-height: 600px;
   /*Your code here again.*/
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: space-between;
 }
 
 .gallery > img{
@@ -142,10 +157,13 @@ header{
   background: #fff;
   border-bottom: 3px solid #50C7C7;
   /*Your  code here again.*/
+  text-align: center;
 }
 
 .nav_links{
   /*Your code here again.*/
+  display: flex;
+  flex-direction: column;
 }
 
 .nav_item a{
@@ -165,7 +183,12 @@ header{
   /* Cards! */
   .card {
     /*Your  code here again.*/
+    flex-basis: 225px;
   }
+
+  /* .card > header{
+    justify-content: flex-start;
+  } */
 
   .card_big{
     -webkit-transform: scaleX(1.12);
@@ -174,11 +197,14 @@ header{
 
   /* Navbar */
   header{
-    /*Your code here again.*/  
+    /*Your code here again.*/
+    justify-content: flex-start;
   }
 
   .nav_links{
-    /*Your code here again.*/  
+    /*Your code here again.*/
+    flex-direction: row;
+    justify-content: flex-end;
   }
 
   .nav_item a{
@@ -186,13 +212,13 @@ header{
   }
 }
 
-@media print { 
+@media print {
   .card {
     flex-basis: 200px;
   }
   /*Your code here again.*/
-  /*You will want four selectors*/  
+  /*You will want four selectors*/
 }
 
-/*Your code here again.*/ 
+/*Your code here again.*/
 /*Add media query to handle reduced-motion*/
